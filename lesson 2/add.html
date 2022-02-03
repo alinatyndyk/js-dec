@@ -20,23 +20,23 @@
     //
     // - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
     //     Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
-    // let numbers = [6, 3, 8];
-    // if (numbers[0] > numbers[1] || numbers[0] > numbers[2]) {
-    //     if (numbers[0] < numbers[1] || numbers[0] < numbers[2]) {
-    //         document.write('first')  // показує яке число є менше ніж одне та більше за інше
-    //     }
-    //     console.log('Wrong!')
-    // } else if (numbers[1] > numbers[0] || number[1] > numbers[2]) {
-    //     if (numbers[1] < numbers[0] || numbers[1] < numbers[2]) {
-    //         document.write('second')
-    //     }
-    //     console.log('Right!')
-    // } else if (numbers[2] > numbers[1] || number[2] > numbers[0]) {
-    //     if (numbers[2] < numbers[1] || numbers[2] < numbers[0]) {
-    //         document.write('third')
-    //     }
-    //     console.log('Wrong!')
-    // }
+    let numbers = [6, 3, 8];
+    if (numbers[0] > numbers[1] || numbers[0] > numbers[2]) {
+        if (numbers[0] < numbers[1] || numbers[0] < numbers[2]) {
+            document.write('first')  // показує яке число є менше ніж одне та більше за інше
+        }
+        console.log('Wrong!')
+    } else if (numbers[1] > numbers[0] || number[1] > numbers[2]) {
+        if (numbers[1] < numbers[0] || numbers[1] < numbers[2]) {
+            document.write('second')
+        }
+        console.log('Right!')
+    } else if (numbers[2] > numbers[1] || number[2] > numbers[0]) {
+        if (numbers[2] < numbers[1] || numbers[2] < numbers[0]) {
+            document.write('third')
+        }
+        console.log('Wrong!')
+    }
     //
     // - Перепишіть конструкцію if з використанням умовного оператора '?':
     // let result;
@@ -45,14 +45,17 @@
     // } else {
     //     result = 'Багато';
     // }
-    let result = +prompt("Number")
-    result < 4? console.log('Malo'): console.log('Bahato');
+    // let result = +prompt("Number")
+    // result < 4? console.log('Malo'): console.log('Bahato');
     //
     //
     // - Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
     // напишіть це тернарним оператором
-    let num = +prompt('Number');
-    num<0? console.log('negative'): num=0? console.log('its a zero'): num>0? console.log('positive')
+    let ac = +prompt('Number');
+    let abc =ac<0?
+        console.log('negative'): ac<0?
+            console.log('positive'):
+            console.log('zero')
 
 </script>
 </body>
