@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+    // створити пустий масив, наповнити його 10 об'єктами new User(....)
+    // function Usercreator(id, name,  surname, email, phone){
+    //     this.id= id;
+    //     this.name = name;
+    //     this.surname = surname;
+    //     this.email = email;
+    //     this.phone = phone;
+    // }
+    // let users = [
+    //     new Usercreator(1,'olya','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(20,'misha','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(73,'luba','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(45,'max','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(25,'anya','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(86,'oleg','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(78,'olga','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(82,'vika','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(19,'serg','hlushko','asd@gmail.com','093759372'),
+    //     new Usercreator(10,'nazar','hlushko','asd@gmail.com','093759372'),
+    // ]
+    // console.log(users);
+    // //
+    // // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+    // let filter = users.filter((item) =>{
+    //     return item.id % 2 ===0;
+    // })
+    // console.log(filter);
+    // // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+    // let sort = users.sort((a,b) => a.id-b.id);
+    // console.log(sort);
+    // //
+    // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+    // створити пустий масив, наповнити його 10 об'єктами Client
+    class Client {
+        constructor(id, name, surname, email, phone, order) {
+            this.id= id;
+            this.name = name;
+            this.surname = surname;
+            this.email = email;
+            this.phone = phone;
+            this.order = order;
+        }
+    }
+    let clients = [
+        new Client(1,'olya','hlushko','asd@gmail.com','093759372',['milk','bread','water','eggs']),
+        new Client(20,'misha','hlushko','asd@gmail.com','093759372',['milk','bread','eggs']),
+        new Client(73,'luba','hlushko','asd@gmail.com','093759372',['water','eggs']),
+        new Client(45,'max','hlushko','asd@gmail.com','093759372',['eggs']),
+        new Client(25,'anya','hlushko','asd@gmail.com','093759372',['milk','bread','water','eggs','carrots']),
+        new Client(86,'oleg','hlushko','asd@gmail.com','093759372',['milk','bread','water','eggs','potato','choco']),
+        new Client(78,'olga','hlushko','asd@gmail.com','093759372',['milk','water','eggs']),
+        new Client(82,'vika','hlushko','asd@gmail.com','093759372',['milk']),
+        new Client(19,'serg','hlushko','asd@gmail.com','093759372',['milk','bread','water','eggs']),
+        new Client(10,'nazar','hlushko','asd@gmail.com','093759372',['milk','bread',])
+    ]
+    // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+    let list = clients.sort((a,b) => a.order.length - b.order.length);
+    console.log(list);
+</script>
+</body>
+</html>
