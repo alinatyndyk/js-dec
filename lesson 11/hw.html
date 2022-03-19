@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form name="f1">-->
+<!--    <input type="text" name="name">-->
+<!--    <input type="number" name="age">-->
+<!--    <button id="btn">submit</button>-->
+<!--</form>-->
+<form name="f2">
+    <input type="text" name="model">
+    <input type="text" name="type">
+    <input type="text" name="volume">
+    <button id="btn">submit</button>
+</form>
+<script>
+  // -створити форму з інпутами для name та age.
+  //         При відправці форми записати об'єкт в localstorage
+  // let f1 = document.forms.f1;
+  // f1.onsubmit = function (e){
+  //     e.preventDefault();
+  //     let user = {name: e.target.name.value,age: e.target.name.value};
+  //     localStorage.setItem('user', JSON.stringify(user));
+  // }
+
+  //
+  // -створити форму з інпутами для model,type та volume автівки.
+  //         при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
+  let arr = JSON.parse(localStorage.getItem('cars')) || [];
+  let f2 = document.forms.f2;
+  f2.onsubmit = function (e){
+      e.preventDefault();
+      let car = {model: e.target.model.value,type: e.target.type.value, volume: e.target.volume.value};
+      arr.push(car);
+      localStorage.setItem('cars', JSON.stringify(arr));
+  }
+</script>
+</body>
+</html>
