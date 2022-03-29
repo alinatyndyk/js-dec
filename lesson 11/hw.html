@@ -35,7 +35,7 @@
       e.preventDefault();
       let car = {model: e.target.model.value,type: e.target.type.value, volume: e.target.volume.value};
       arr.push(car);
-      localStorage.setItem('cars', JSON.stringify(arr));
+      localStorage.setItem('cars', JSON.stringify(arr+));
   }
 </script>
 </body>
