@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .users{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .user{
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        margin-left: calc(25% - 100px);
+        margin-right: calc(25% - 100px);
+    }
+</style>
+<body>
+<div class="users"></div>
+<script>
+    let usersDiv = document.getElementsByClassName('users')[0];
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(value => value.json())
+    .then(value => {
+        for (const user of value){
+            let userDiv =document.createElement('div');
+            userDiv.classList.add('user');
+            let href = document.createElement('a');
+            href.innerText = `${user.id} - ${user.name}`;
+            href.href = `./user-details.html?data=${JSON.stringify(user)}`;
+            userDiv.appendChild(href);
+            usersDiv.appendChild(userDiv);
+        }
+    });
+
+
+
+</script>
+</body>
+</html>
